@@ -14,7 +14,7 @@ spec:
         app: primeiroteste-be
     spec:
       containers:
-      - image: local-test/primeiroteste-be:1.0.0
+      - image: local-test/primeiroteste-be:1.0.2
         name: primeiroteste-be
         ports:
         - containerPort: 80
