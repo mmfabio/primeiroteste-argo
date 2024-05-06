@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: primeiroteste-be
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: primeiroteste-be
+  template:
+    metadata:
+      labels:
+        app: primeiroteste-be
+    spec:
+      containers:
+      - image: local-test/primeiroteste-be:1.0.0
+        name: primeiroteste-be
+        ports:
+        - containerPort: 80
