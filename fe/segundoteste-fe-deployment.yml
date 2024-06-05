@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: segundoteste-fe
+spec:
+  replicas: 1
+  revisionHistoryLimit: 1
+  selector:
+    matchLabels:
+      app: segundoteste-fe
+  template:
+    metadata:
+      labels:
+        app: segundoteste-fe
+    spec:
+      containers:
+      - image: local-test/segundoteste-fe:1.0.1
+        name: segundoteste-fe
+        ports:
+        - containerPort: 8080
