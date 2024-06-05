@@ -14,7 +14,7 @@ spec:
         app: segundoteste-fe
     spec:
       containers:
-      - image: local-test/segundoteste-fe:1.0.1
+      - image: local-test/segundoteste-fe:1.0.0
         name: segundoteste-fe
         ports:
         - containerPort: 8080
